@@ -12,7 +12,7 @@ In this workshop, you will be creating a front-end and back-end solution that ut
 - Clone this git repository with:
 
 ```bash
-git clone https://github.com/adamweeks/webex-sdk-expert-connect.git
+git clone https://github.com/WebexSamples/js-sdk-expert-connect-workshop.git
 ```
 
 - Change into the repository directory:
