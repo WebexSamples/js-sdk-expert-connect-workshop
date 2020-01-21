@@ -4,9 +4,10 @@ const express = require('express');
 const {prepareSpace} = require('./webex');
 const {createUser} = require('./jwt');
 const {loginWebexGuest} = require('./login');
+const APP_ROOT = require('app-root-path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const expertEmail = process.env.WEBEX_EXPERT_EMAIL;
 
 app.use(express.json());
@@ -17,7 +18,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(express.static(APP_ROOT.path + '/dist/client'));
+
+app.get('/hello', (req, res) => res.send('Hello World!'));
 
 /**
  * This endpoint does the following things:

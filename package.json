@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "dev:client": "parcel client/index.html client/connect.html",
+    "dev:client": "parcel watch client/index.html client/connect.html --out-dir dist/client",
     "dev:server": "nodemon --watch ./server --exec node ./server/index.js",
     "start": "npm run dev:server & npm run dev:client",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@momentum-ui/core": "^19.0.8",
+    "app-root-path": "^3.0.0",
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

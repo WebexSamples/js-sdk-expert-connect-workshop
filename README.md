@@ -34,7 +34,7 @@ npm start
 ```
 
 - Open [Postman Application](https://www.getpostman.com/)
-- Send a request with Postman to "http://localhost:3000"
+- Send a request with Postman to "http://localhost:3000/hello"
   - Verify the response of "Hello World"
 
 ### Step 1: Creating a JWT
@@ -202,7 +202,7 @@ The client code lives in the [`client`](./client) folder and is compiled and ser
   - `index.html` is our web form that allows our users to enter data to send to an expert.
   - `connect.html` takes the data from the web form and sends it to our node.js API server and connects the user with an expert.
 
-- Open a web browser to our web server at <http://localhost:1234/index.html>
+- Open a web browser to our web server at <http://localhost:3000/index.html>
 - Open the file for this web page located at [`client/index.html`](./client/index.html)
 
   - This web page is completely functional and does not need modification.
@@ -229,7 +229,7 @@ Now that we are familiar with the code base, let's send our web data to the API.
   createExpertSpace(params);
   ```
 
-  - Open a web browser to our web server at <http://localhost:1234/index.html>
+  - Open a web browser to our web server at <http://localhost:3000/index.html>
   - Fill out the form data and click "Connect with an Expert" button.
   - This should take you to `connect.html` and in a few seconds, you should see our expert space created in Webex Teams!
   - The status on the web page should also read: "Expert Space Created"
@@ -266,7 +266,7 @@ createExpertSpace(params).then((postResponse) => {
 
 Our code journey is now complete! Let's connect to our "expert"!
 
-- Open a web browser to our web server at <http://localhost:1234/index.html>
+- Open a web browser to our web server at <http://localhost:3000/index.html>
   - Fill out the form data and click "Connect with an Expert" button.
   - This should take you to `connect.html` and in a few seconds, you should see our expert space created in Webex Teams.
   - The browser should display "Webex connected, waiting for expert...".
