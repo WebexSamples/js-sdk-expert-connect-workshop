@@ -1,10 +1,6 @@
-const Webex = require('webex');
+const {createExpertSpace, getUrlParams} = require('./utils');
 
-const {createExpertSpace, updateStatus, getUrlParams, postData} = require('./utils');
-
-const {bindMeetingEvents, connectToMeeting, joinMeeting} = require('./meeting');
-
-const SERVER_URL = 'http://localhost:3000';
+const {connectToMeeting} = require('./meeting');
 
 function main() {
   const params = getUrlParams(window.location.href);

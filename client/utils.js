@@ -1,5 +1,3 @@
-const SERVER_URL = 'http://localhost:3000';
-
 function updateStatus(status) {
   document.getElementById('status').innerText = status;
 }
@@ -27,7 +25,7 @@ function postData(url = '', data = {}) {
 }
 
 function createExpertSpace(params) {
-  const postUrl = `${SERVER_URL}/guest`;
+  const postUrl = './guest';
   updateStatus('Creating Expert Space');
 
   return postData(postUrl, params)

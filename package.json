@@ -9,7 +9,10 @@
   "scripts": {
     "dev:client": "parcel watch client/index.html client/connect.html --out-dir dist/client",
     "dev:server": "nodemon --watch ./server --exec node ./server/index.js",
+    "dev:client:solution": "parcel watch solution/client/index.html solution/client/connect.html --out-dir dist/client",
+    "dev:server:solution": "nodemon --watch ./solution/server --exec node ./solution/server/index.js",
     "start": "npm run dev:server & npm run dev:client",
+    "start:solution": "npm run dev:server:solution & npm run dev:client:solution",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Weeks <adweeks@cisco.com>",

@@ -1,10 +1,13 @@
 require('dotenv').config();
 
 const express = require('express');
+const {prepareSpace} = require('./webex');
 const {createUser} = require('./jwt');
+const {loginWebexGuest} = require('./login');
+const APP_ROOT = require('app-root-path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const expertEmail = process.env.WEBEX_EXPERT_EMAIL;
 
 app.use(express.json());
@@ -15,7 +18,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(express.static(APP_ROOT.path + '/dist/client'));
+
+app.get('/hello', (req, res) => res.send('Hello World!'));
 
 /**
  * This endpoint does the following things:
@@ -28,12 +33,19 @@ app.post('/guest', async (req, res) => {
   // The response should allow the user to open an sdk instance to listen to meetings on the create space.
   try {
     const displayName = req.body.name || 'SDK Workshop Guest';
+    const spaceTitle = 'SDK Expert Connect Workshop';
+    const message = `A user has requested expert support with the following details:
+
+Pet: ${req.body.pet}
+
+Details: ${req.body.details}
+    `;
 
     const guestJWT = await createUser({displayName});
 
-    const guestUser = 'Fix me in step 2';
+    const guestUser = await loginWebexGuest(guestJWT);
 
-    const space = 'Fix me in step 3';
+    const space = await prepareSpace({title: spaceTitle, email: expertEmail, guest: guestUser.id, message});
 
     const response = {
       guestJWT,

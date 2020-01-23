@@ -27,7 +27,7 @@ function postData(url = '', data = {}) {
 }
 
 function createExpertSpace(params) {
-  const postUrl = `${SERVER_URL}/guest`;
+  const postUrl = './guest';
   updateStatus('Creating Expert Space');
 
   return postData(postUrl, params)
