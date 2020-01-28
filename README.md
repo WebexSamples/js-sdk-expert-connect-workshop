@@ -165,6 +165,9 @@ Let's create a bot!
 We also need to tell the bot who our expert is. Congratulations, it is you!
 
 - Edit the `.env` file and update the `WEBEX_EXPERT_EMAIL` value with your Webex Teams email address.
+- To update your application with these changes, we need to restart.
+  - Press "control-c" to kill the server
+  - Run `npm start` to restart
 
 Let's utilize the Webex JS SDK on our node server to create a space with our bot:
 
