@@ -62,8 +62,15 @@ This file contains secrets to your application and should not be saved in the re
 
   - Copy the values from the Guest Issuer screen in the developer portal and save them in the `.env` file.
   - Your `.env` file should now have values for `GUEST_ISSUER_ID` and `GUEST_SHARED_SECRET`.
+  - To update your application with these changes, we need to restart.
+    - Press "control-c" to kill the server
+    - Run `npm start` to restart
 
-- Return to Postman and send a POST request to <http://localhost:3000/guest>
+Let's test our guest issuer endpoint:
+
+- Return to the Postman app.
+- Update the request type to "POST"
+- Change the request to `http://localhost:3000/guest`
   - This should return a JSON object with values that we will fix.
 
 You've been provided with a `createUser` function that takes the guest issuer and secret and outputs a JWT.
