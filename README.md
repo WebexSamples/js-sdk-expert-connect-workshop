@@ -34,7 +34,10 @@ npm start
 ```
 
 - Open [Postman Application](https://www.getpostman.com/)
-- Send a request with Postman to "http://localhost:3000/hello"
+- Create a request with Postman
+  - Click on "Create a request" in the "Start something new" section of the launchpad
+  - Enter `http://localhost:3000/hello` in the "Enter Request URL" field
+  - Press "Send"
   - Verify the response of "Hello World"
 
 ### Step 1: Creating a JWT
