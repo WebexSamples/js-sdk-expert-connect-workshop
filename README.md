@@ -18,7 +18,7 @@ git clone https://github.com/WebexSamples/js-sdk-expert-connect-workshop.git
 - Change into the repository directory:
 
 ```bash
-cd webex-sdk-expert-connect
+cd js-sdk-expert-connect-workshop
 ```
 
 - Install package dependencies:

@@ -1,5 +1,5 @@
 {
-  "name": "webex-sdk-expert-connect",
+  "name": "js-sdk-expert-connect-workshop",
   "version": "0.0.1",
   "description": "Webex SDK Expert Connect Workshop",
   "main": "./server/index.js",
