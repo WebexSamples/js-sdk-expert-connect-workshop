@@ -21,6 +21,12 @@ git clone https://github.com/WebexSamples/js-sdk-expert-connect-workshop.git
 cd js-sdk-expert-connect-workshop
 ```
 
+- Open our project with VS Code:
+
+```bash
+code .
+```
+
 - Install package dependencies:
 
 ```bash
